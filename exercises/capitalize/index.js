@@ -9,6 +9,7 @@
 
 function capitalize(str) {
     
+    //This may not always look: e.g. "!?Hello"
     result = str[0].toUpperCase()
 
     for(let i =1; i< str.length; i++) {
