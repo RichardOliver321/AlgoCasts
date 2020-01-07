@@ -40,7 +40,7 @@ function steps(n, row = 0, stair = "") {
 module.exports = steps;
 
 
-
+//N * N === n^2 run time complexity
 // function steps(n) {
 //     for(let row = 0; row < n; row++){
 //         let stair = ""
