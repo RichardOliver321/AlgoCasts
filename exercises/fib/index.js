@@ -8,14 +8,39 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {
+
+
+function slowFib(n) {
     if(n < 2)
         return n
 
     return fib(n-1) + fib(n-2)
 }
 
+function memoize(fn) {
+
+    const cache = {};
+    //Don't know how many args
+    return function(...args) {
+        if(cache[args])
+            return cache[args]
+        cache[args] = fn.apply(this, args)
+        return cache[args]
+    };
+}
+
+const fib = memoize(slowFib)
 module.exports = fib;
+
+
+//2^n run time. It nearly doubles for every run. EXPONENTIAL bad implementation
+//SLOW
+// function fib(n, r) {
+//     if(n < 2)
+//         return n
+
+//     return fib(n-1) + fib(n-2)
+// }
 
 
 // function fib(n) {
