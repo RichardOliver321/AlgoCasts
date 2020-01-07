@@ -18,7 +18,6 @@ function slowFib(n) {
 }
 
 function memoize(fn) {
-
     const cache = {};
     //Don't know how many args
     return function(...args) {

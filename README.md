@@ -38,3 +38,7 @@ Searching a sorted array? -> O(log(n))
 #Space Complexity
 How much memory is required
 O(n) -> revesed string
+
+
+#memoization
+record the arguments of each function along with the result
