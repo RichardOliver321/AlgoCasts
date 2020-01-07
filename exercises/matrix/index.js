@@ -15,6 +15,53 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+//horizontal distance
+// vertical distance
+
+
+function matrix(n) {
+
+    let resultMatrix = [];
+
+    for (i =0; i < n; i++){
+        resultMatrix.push([]);
+    }
+        
+
+    let startColumn = 0;
+    let endColumn = n-1;
+    let startRow = 0;
+    let endRow = n-1;
+    let counter = 1;
+
+    while( startColumn <= endColumn && startRow <= endRow) {
+        
+        //Top column
+        for ( let i = startColumn; i <= endColumn; i++ ) {
+            resultMatrix[startRow][i] = counter++;    
+        } 
+        startRow++;
+
+        //Right column
+        for(let i = startRow; i <= endRow; i++) {
+            resultMatrix[i][endColumn] = counter++;
+        }
+        endColumn--;
+
+        //Bot 
+        for(let i = endColumn; i >= startColumn; i--) {
+            resultMatrix[endRow][i] = counter++;
+        }
+        endRow--;
+
+        //Up
+        for(let i = endRow; i >= startRow; i--) {
+            resultMatrix[i][startColumn] = counter++;
+        }
+        startColumn++;
+    }
+    return resultMatrix
+
+}
 
 module.exports = matrix;
