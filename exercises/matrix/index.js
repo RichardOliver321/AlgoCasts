@@ -15,10 +15,6 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-//horizontal distance
-// vertical distance
-
-
 function matrix(n) {
 
     let resultMatrix = [];
