@@ -33,3 +33,8 @@ Two nested for loops iterating over the same ollection -> O(n^2)
 Two nested for loogs iterating over different collections -> O(n*m)
 Sorting? ->  O(n*log(n))
 Searching a sorted array? -> O(log(n))
+
+
+#Space Complexity
+How much memory is required
+O(n) -> revesed string
