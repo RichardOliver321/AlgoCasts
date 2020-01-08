@@ -8,7 +8,6 @@
 function validate(node, min = null, max = null) {
     valid = true;
 
-
     if(max && node.data > max) {
         return false;
     }
